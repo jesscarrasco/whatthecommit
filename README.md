@@ -20,7 +20,8 @@ haven't committed a change in ages and feel too important to use
 
 To get up and running as fast as possbile run
 
-    curl -L http://github.com/jesscarrasco/whatthecommit/raw/master/sieirocommits > /usr/local/bin/sieirocommits && chmod 0777 !#:3
+    curl -L http://github.com/jesscarrasco/whatthecommit/raw/master/sieirocommits > /usr/local/bin/sieirocommits
+    chmod 0755 /usr/local/bin/sieirocommits
 
 #### Are there any options?
 
