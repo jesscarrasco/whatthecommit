@@ -3,14 +3,13 @@
 require 'optparse'
 require 'open-uri'
 
-class WhatTheCommit
+class SieiroCommits
   VERSION = "1.0.0"
-  URL = "http://whatthecommit.com/index.txt"
+  MESSAGES = ["fix help","varios fix","varios fixes","varias fixes","fix css","fix logic","fix styles","fix bug ","inputs fixes","new files","fix sintac","fixes gerais","merge","fix merge","remove console log","start"]
 
   attr_reader :disclaimer, :iterations
 
   def parser
-    @disclaimer = "(© whatthecommit.com)"
     @iterations = 1
 
     @parser ||= OptionParser.new do |opts|
@@ -51,8 +50,8 @@ class WhatTheCommit
       exit 1
     end
 
-    iterations.times { puts "#{open(URL).read.strip} #{disclaimer}".strip }
+    iterations.times { puts "#{MESSAGES.sample}".strip }
   end
 end
 
-WhatTheCommit.new.run(*ARGV)
+SieiroCommits.new.run(*ARGV)
